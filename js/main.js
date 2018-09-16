@@ -1,5 +1,7 @@
+
 /*
- *Registering service worker
+ * Guidance for creating this code courtesy of https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-4-service-workers/
+ * Registering service worker
  */
 
 if('serviceWorker' in navigator) {
