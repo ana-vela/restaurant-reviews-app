@@ -38,7 +38,7 @@ self.addEventListener('install', event => {
 /*
  * Establishing the fetch event and handling possible responses and error cases
  */
-self.addEventListen('fetch', event => {
+self.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(event.request).then(response => {
           if (response) {
