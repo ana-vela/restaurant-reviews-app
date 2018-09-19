@@ -48,9 +48,9 @@ self.addEventListener('fetch', event => {
             console.log('Could not find ', event.request, ' in cache, fectching');
             return fetch(event.request)
             .then(function(response) {
-              const responseClone =response.clone();
+              const clonedResponse =response.clone();
               caches.open('v1').then(function(cache) {
-                cache.put(event.request, response);
+                cache.put(event.request, clonedResponse);
               })
               return response;
             })
